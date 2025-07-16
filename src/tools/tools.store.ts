@@ -8,7 +8,7 @@ import { tools as allTools } from './index';
 const base = import.meta.env.BASE_URL ?? '/';
 let filterConfig: ToolsFilter = {};
 try {
-  const remoteConfigResponse = await fetch(`${base}tools-filter.json`);
+  const remoteConfigResponse = await fetch(`${base}/tools-filter.json`);
   if (remoteConfigResponse.ok) {
     filterConfig = (await remoteConfigResponse.json()) as ToolsFilter;
   }

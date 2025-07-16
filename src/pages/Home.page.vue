@@ -12,7 +12,7 @@ import { config } from '@/config';
 const base = import.meta.env.BASE_URL ?? '/';
 const homeCustomMarkdown = computedAsync(async () => {
   try {
-    const remoteCustomHomeMarkdownResponse = await fetch(`${base}home.custom.md`);
+    const remoteCustomHomeMarkdownResponse = await fetch(`${base}/home.custom.md`);
     if (remoteCustomHomeMarkdownResponse.ok) {
       return await remoteCustomHomeMarkdownResponse.text();
     }
